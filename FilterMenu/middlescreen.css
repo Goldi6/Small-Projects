@@ -1,0 +1,23 @@
+div.menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+}
+
+article.menu-item {
+    margin-bottom: 25px;
+}
+
+.item-img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+}
+
+.filter-btn {
+    font-weight: bolder;
+}
+
+.btns {
+    flex-wrap: wrap;
+}

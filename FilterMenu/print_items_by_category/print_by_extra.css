@@ -1,0 +1,11 @@
+div#menu-items {
+    display: block;
+}
+
+@media only screen and (min-width: 600px) {
+    div.grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10%;
+    }
+}

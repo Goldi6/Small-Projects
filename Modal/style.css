@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root {
+    --blue: rgb(82, 142, 170);
+    --ff-roboto: 'Roboto', sans-serif;
+}
+
+.close-btn::before,
+.close-btn::after {
+    content: "";
+    border: 3px solid red;
+    border-radius: 5px;
+    width: 25px;
+    height: 0;
+    display: block;
+    /* position: absolute; */
+    background-color: red;
+}
+
+.close-btn::after {
+    transform: translateY(-3px) rotate(-45deg);
+}
+
+.close-btn::before {
+    transform: translateY(3px) rotate(45deg);
+}
+
+.close-btn {
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+
+/* position-close-btn */
+
+.close-btn {
+    position: absolute;
+    top: -2px;
+    right: 0;
+}
+
+html {
+    background: url(ervan-m-wirawan-ACS0yQxxWZU-unsplash.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: var(--ff-roboto);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero,
+.modal-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: grid;
+    place-items: center;
+}
+
+h1,
+h3 {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(21, 44, 54);
+}
+
+h3 {
+    font-weight: 700;
+}
+
+.btn {
+    font-size: 1.1rem;
+    border: none;
+    padding: 3px 30px;
+    background-color: var(--blue);
+    border-radius: 5px;
+    color: white;
+}
+
+.banner,
+.modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 20px;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.modal-container {
+    /* visibility: hidden; */
+    z-index: 5;
+    background-color: white;
+    position: relative;
+}
+
+.modal-overlay {
+    background-color: rgba(39, 63, 75, 0.2);
+    visibility: hidden;
+    backdrop-filter: blur(2px);
+}
+
+.banner {
+    box-shadow: 0px 0px 5px 1px whitesmoke;
+    /* border: 1px solid black; */
+    background-color: rgba(255, 255, 255, 1);
+}
+
+form>input {
+    padding: 5px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    filter: brightness(85%);
+}
+
+input[type="email"]:focus {
+    outline-color: none !important;
+}
+
+button {
+    cursor: pointer;
+}
+
+.err {
+    color: red;
+    font-size: small;
+    display: none;
+}

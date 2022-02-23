@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Project</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="small-screen.css" type="text/css" media="screen and (max-width:600px)">
+    <link rel="stylesheet" href="wide-screen.css" type="text/css" media="screen and (min-width:900px) ">
+    <link rel="stylesheet" href="medium-screen.css" type="text/css" media="screen and (max-width:900px) and (min-width:600px)">
+
+
+
+
+</head>
+
+<body>
+    <!-- hero -->
+    <header class="hero">
+        <div class="banner">
+            <h1>Modal Project</h1>
+            <button class="btn modal-btn">Open Modal</button>
+        </div>
+    </header>
+    <!-- end of hero -->
+    <!-- modal -->
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <h3>Subscribe to our Newsletr?</h3>
+            <form action="">
+                <input type="email" placeholder="youremail@email.com" id="email">
+                <input type="submit" value="submit" id="submit">
+            </form>
+            <p class="err"></p>
+            <button class="close-btn">
+
+            </button>
+        </div>
+    </div>
+    <script>
+        const modalBtn = document.querySelector(".modal-btn");
+        const closeBtn = document.querySelector(".close-btn");
+        const overlay = document.querySelector(".modal-overlay");
+
+        modalBtn.onclick = function() {
+            overlay.style.visibility = "visible";
+        };
+        closeBtn.onclick = function() {
+            overlay.style.visibility = "hidden";
+            err.style.display = "none";
+
+            form.style.display = "block";
+            text.innerHTML = "Subscribe to our Newsletr?";
+            text.style.fontSize = "1rem";
+            email.value = "";
+
+        }
+
+        const submit = document.querySelector("#submit");
+        const email = document.querySelector("#email");
+        const form = document.querySelector("form");
+        const text = document.querySelector("h3");
+        const err = document.querySelector(".err");
+        let empty = "*Please fill up the form";
+        let incorrect = "Your email address is incorrect, please try again";
+
+
+        form.onsubmit = function(e) {
+            e.preventDefault();
+            const regexMatch = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value);
+            if (!email.value) {
+                e.preventDefault();
+                err.style.display = "block";
+                err.innerHTML = empty;
+
+            } else if (regexMatch) {
+                form.style.display = "none";
+                text.innerHTML = "Thank you for your subscription!";
+                text.style.fontSize = "1.25rem";
+                err.style.display = "none";
+
+                //then ajax process
+            }
+
+        }
+    </script>
+</body>
+
+</html>

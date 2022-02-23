@@ -1,0 +1,94 @@
+body {
+    font-family: var(--ff-secondary);
+    background: var(--clr-grey-10);
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+main {
+    min-height: calc(100vh - 3rem);
+    display: grid;
+    place-items: center;
+}
+
+.btn-hero {
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--clr-black);
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    font-weight: 700;
+    transition: var(--transition);
+    border: 2px solid var(--clr-black);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.color {
+    color: var(--clr-primary-2);
+}
+
+.btn-hero:hover {
+    color: white;
+    background: var(--clr-black);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.container h2 {
+    background: var(--clr-black);
+    color: white;
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 2.5rem;
+}
+
+.container h4 {
+    border-radius: var(--radius);
+    border: white 3px solid;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 0;
+    background-color: #222;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .section-center {
+        width: 95vw;
+    }
+}

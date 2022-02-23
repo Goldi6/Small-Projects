@@ -1,0 +1,24 @@
+div.menu-items {
+    margin: auto;
+    margin-top: 50px;
+    width: 90%;
+}
+
+article.menu-item {
+    margin-bottom: 25px;
+}
+
+.item-img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+
+.filter-btn {
+    font-weight: bolder;
+    font-size: large;
+}
+
+.btns {
+    flex-wrap: wrap;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll bar with Modal</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="events-modal.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- fontAwesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> -->
+
+    <!-- slik carouset
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
+    <!--// Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+
+
+</head>
+
+
+
+
+<body>
+    <nav>
+        <h2>Lorem Ipsup</h2>
+        <div class="nav-btns">
+            <button>about</button>
+            <button>home</button>
+            <button>help</button>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="events-wrap">
+            <section class="events">
+                <span class="arrow" id="events-top-arrow">
+                    <div id="up">
+
+                    </div>
+                    <!-- <i class="fas fa-caret-up"></i> -->
+                </span>
+                <h3>Events</h3>
+                <ul id="events-list">
+                </ul>
+                <span class="arrow" id="events-bottom-arrow">
+                    <div id="down">
+
+                    </div>
+                    <!-- <i class="fas fa-caret-down"></i> -->
+                </span>
+            </section>
+            <div class="big-arrow closed">
+            </div>
+        </div>
+        <nav class="bottom">
+            <div class="nav-btns">
+                <button>about</button>
+                <button>home</button>
+                <button>help</button>
+            </div>
+        </nav>
+    </div>
+    <div class="events-modal-wrap modal">
+
+        <section class="events-modal">
+            <button class="carousel-close close">X</button>
+            <h2>Closest Events</h2>
+
+
+            <div class="events-modal-content slik-carousel">
+
+            </div>
+
+
+
+        </section>
+    </div>
+
+    <script src="objects.js"></script>
+
+    <script src="event-scroll.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.slik-carousel').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                adaptiveHeight: false,
+                variableWidth: true,
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>
